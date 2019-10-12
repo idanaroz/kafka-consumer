@@ -25,6 +25,9 @@ public class BasicConsumer implements Consumer {
     @PostConstruct
     public void run() {
         final Logger logger = LoggerFactory.getLogger(BasicConsumer.class);
+        logger.info("\n **********************************************\n " +
+                "The bootstrapServer is=" + bootstrapServer +
+                "\n ********************************************** ");
 
 
         String groupId = "my-first-kafka-services";

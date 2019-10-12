@@ -1,9 +1,9 @@
 FROM openjdk:14-alpine
 
-COPY target/consumer-*.jar /consumer.jar
+COPY target/kafka-consumer-*.jar /kafka-consumer.jar
 
-ENV kafka_bootstrapServer 0.0.0.0:9092
+ENV kafka_bootstrapServer 192.168.1.21:9092
 
-CMD ["java", "-jar", "/producer.jar"]
+CMD ["java", "-jar", "/kafka-consumer.jar"]
 
 
